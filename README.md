@@ -15,34 +15,49 @@ Thymeleaf
 
 # архитектура запросов
 /api/customers
-|Запрос | Доп.адресс |Требование        |          CustomerRequest:
-|-------|------------|------------------|          String name
-|Get    |            |                  |          String address
-|Post   |            | CustomerRequest  |          String route
-|Get    | /route     | CustomerRequest  |          String accessKey
+|Запрос | Доп.адресс |Требование        |          
+|-------|------------|------------------|          
+|Get    |            |                  |          
+|Post   |            | CustomerRequest  |          
+|Get    | /route     | CustomerRequest  |          
 |Get    | /find      | CustomerRequest  |
 |Put    |            | CustomerRequest  |
 |Delete |            | CustomerRequest  |
 
-
+CustomerRequest:
+String name
+String address
+String route
+String accessKey
 
 /api/orders
-|Запрос | Доп.адресс |Требование        |          OrderRequest:
-|-------|------------|------------------|          List<Integer> orders
+|Запрос | Доп.адресс |Требование        |          
+|-------|------------|------------------|          
 |Get    |            |                  |          
 |Post   |            | OrderRequest     |          
 
-
+OrderRequest:
+List<Integer> orders
 
 /api/ttns
-|Запрос  | Доп.адресс |Требование      |          TtnRequest:
-|--------|------------|----------------|          String name
-|Get     |            |                |          String address
-|Post    |            | TtnRequest     |          String route
-|Get     | /date      | TtnRequest     |          String accessKey
-|Get     | /route     | TtnRequest     |          LocalDate date
-|Get     | /allby     | TtnRequest     |          List<Integer> orders
+|Запрос  | Доп.адресс |Требование      |          
+|--------|------------|----------------|         
+|Get     |            |                |          
+|Post    |            | TtnRequest     |          
+|Get     | /date      | TtnRequest     |          
+|Get     | /route     | TtnRequest     |          
+|Get     | /allby     | TtnRequest     |          
 |Put     | /update    | TtnRequest     |          
+
+TtnRequest:
+String name
+String address
+String route
+String accessKey
+LocalDate date
+List<Integer> orders
+
+
 
 
 Вертикальные линии обозначают столбцы.
