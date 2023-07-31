@@ -1,16 +1,20 @@
 # описание
-Мой проект Ttn 
+Мой проект Ttn
+
+Реализована возможность создания новых - заказчика, заказа и Ttn на основании заказчика и добавления их в базу данных
+Реализована возможность удалять, обновлять и искать заказчика в базе данных
+Реализована возможность обновления заказа в определённой Ttn, поиска Ttn по дате, маршруту и по заказчику
 
 # что использовал
-JDK 8+
-Intellij Idea
-Spring (Spring Boot, Spring MVC, Spring Security)
-Hibernate
-Thymeleaf
+JDK 8+,
+Intellij Idea,
+Spring (Spring Boot, Spring MVC, Spring Security),
+Hibernate,
+Thymeleaf,
 MySQL
 
 # трудности
-Spring Security
+Spring Security,
 Thymeleaf
 
 # архитектура запросов
