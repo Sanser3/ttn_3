@@ -39,7 +39,7 @@ Thymeleaf
 
 | OrderRequest:        |
 |:---------------------|
-| List<Integer> orders |
+| List(Integer) orders |
 
 /api/ttns
 |Запрос  | Доп.адресс |Требование      |          
@@ -58,5 +58,5 @@ Thymeleaf
 | String route         |
 | String accessKey     |
 | LocalDate date       |
-| List<Integer> orders |
+| List(Integer) orders |
 
