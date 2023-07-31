@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+<p>Click <a th:href="@{/api/ttns}">here</a> to see all Ttns.</p>
+<p>Click <a th:href="@{/getdatettn}">here</a> to see all Ttns by Date.</p>
+<p>Click <a th:href="@{/getroutettn}">here</a> to see all Ttns by Route.</p>
+
+<p>Click <a th:href="@{/api/customers}">here</a> to see all Customers.</p>
+<p>Click <a th:href="@{/getroutecustom}">here</a> to see all Customers by Route.</p>
+
+<p>Click <a th:href="@{/addcustomer}">here</a> to add New Customers.</p>
+<!--<p>Click <a th:href="@{/addttn}">here</a> to see a add New Ttn.</p>-->
+<!--<p>Click <a th:href="@{/submitOrder}">here</a> to see a order-form.</p>-->
+<!--<p>Click <a th:href="@{/updatecustomer}">here</a> to see a Update Customers.</p>-->
+
+<p>Click <a th:href="@{/logout}">here</a> to logout.</p>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+</head>
+<body>
+<h1>Введите информацию о заказе:</h1>
+<form id="orderForm">
+    <label for="name">Имя:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="address">Адрес:</label>
+    <input type="text" name="address" id="address" required />
+
+    <label for="route">Маршрут:</label>
+    <input type="text" name="route" id="route" required />
+
+<!--    <label for="accessKey">Ключ доступа:</label>-->
+<!--    <input type="text" name="accessKey" id="accessKey" required />-->
+
+<!--    <label for="date">Дата:</label>-->
+<!--    <input type="date" name="date" id="date" required />-->
+
+    <h2>Введите числа для заказа:</h2>
+    <input type="number" name="orders" />
+    <input type="number" name="orders" />
+    <input type="number" name="orders" />
+    <input type="number" name="orders" />
+    <input type="number" name="orders" />
+    <!-- Здесь можно добавить дополнительные поля для ввода чисел -->
+
+    <button type="button" onclick="submitOrder()">Отправить заказ</button>
+</form>
+
+<script>
+    function submitOrder() {
+        // Получение значений всех полей ввода
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var route = document.getElementById("route").value;
+        // var accessKey = document.getElementById("accessKey").value;
+        // var date = document.getElementById("date").value;
+
+        // Получение всех элементов с именем "orders"
+        var orderInputs = document.getElementsByName("orders");
+
+        // Создание пустого массива для чисел заказа
+        var orders = [];
+
+        // Итерация по элементам ввода и добавление чисел в массив
+        for (var i = 0; i < orderInputs.length; i++) {
+            orders.push(parseInt(orderInputs[i].value));
+        }
+
+        // Создание объекта с данными заказа
+        var orderData = {
+            name: name,
+            address: address,
+            route: route,
+            // accessKey: accessKey,
+            // date: date,
+            orders: orders
+        };
+
+        // Отправка информации о заказе на сервер с помощью AJAX-запроса
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/submitOrder");
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(orderData));
+    }
+</script>
+</body>
+</html>
