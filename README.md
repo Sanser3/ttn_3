@@ -24,11 +24,12 @@ Thymeleaf
 |Put    |            | CustomerRequest  |
 |Delete |            | CustomerRequest  |
 
-CustomerRequest:
-String name
-String address
-String route
-String accessKey
+| CustomerRequest: |
+|:-----------------|
+| String name      |
+| String address   |
+| String route     |
+| String accessKey |
 
 /api/orders
 |Запрос | Доп.адресс |Требование        |          
@@ -36,8 +37,9 @@ String accessKey
 |Get    |            |                  |          
 |Post   |            | OrderRequest     |          
 
-OrderRequest:
-List<Integer> orders
+| OrderRequest:        |
+|:---------------------|
+| List<Integer> orders |
 
 /api/ttns
 |Запрос  | Доп.адресс |Требование      |          
@@ -49,22 +51,12 @@ List<Integer> orders
 |Get     | /allby     | TtnRequest     |          
 |Put     | /update    | TtnRequest     |          
 
-TtnRequest:
-String name
-String address
-String route
-String accessKey
-LocalDate date
-List<Integer> orders
-
-
-
-
-Вертикальные линии обозначают столбцы.
-
-| Таблицы       | Это                | Круто |
-| ------------- |:------------------:| -----:|
-| столбец 3     | выровнен вправо    | $1600 |
-| столбец 2     | выровнен по центру |   $12 |
-| зебра-строки  | прикольные         |    $1 |
+| TtnRequest:          |
+|:---------------------|
+| String name          |
+| String address       |
+| String route         |
+| String accessKey     |
+| LocalDate date       |
+| List<Integer> orders |
 
